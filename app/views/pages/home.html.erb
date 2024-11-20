@@ -3,7 +3,7 @@
   <div class="profile">
     <%= image_tag 'Profile.jpeg', alt: 'Atzin Cruz', class: 'profile-photo' %>
 
-    <h1><%= t('home.greeting') %></h1>
+    <h1><%= t('home.greeting') %> </h1>
     <p><%= t('home.description') %></p>
   </div>
 
@@ -12,15 +12,19 @@
     <ul>
       <li><a href="#academic-achievements"><%= t('home.academic_achievements') %></a></li>
       <li><a href="#personal-projects"><%= t('home.personal_projects') %></a></li>
+      <li><a href="#contact"><%=t('contact.title') %></a></li>
     </ul>
   </nav>
+
+  <%= render 'shared/carrusel' %>
+
 
   <!-- Logros Académicos -->
   <section id="academic-achievements">
     <h2><%= t('home.academic_achievements_title') %></h2>
     <div class="cards-container">
       <!-- Tarjeta 1 -->
-      <div class="card">
+      <div class="custom-card">
         <%= image_tag 'icpc.png', alt: t('home.achievement_1_title'), class: 'card-image' %>
 
         <div class="card-content">
@@ -30,7 +34,7 @@
       </div>
 
       <!-- Tarjeta 2 -->
-      <div class="card">
+      <div class="custom-card">
         <%= image_tag 'netica.jpeg', alt: t('home.project_2_title'), class: 'card-image' %>
         <div class="card-content">
           <h3><%= t('home.achievement_2_title') %></h3>
@@ -39,7 +43,7 @@
       </div>
 
       <!-- Tarjeta 3 -->
-      <div class="card">
+      <div class="custom-card">
         <%= image_tag 'chess.jpg', alt: t('home.achievement_3_title'), class: 'card-image' %>
         <div class="card-content">
           <h3><%= t('home.achievement_3_title') %></h3>
@@ -54,7 +58,7 @@
     <h2><%= t('home.personal_projects_title') %></h2>
     <div class="cards-container">
       <!-- Tarjeta 1 -->
-      <div class="card">
+      <div class="custom-card">
         <%= image_tag 'portfolio.png', alt: t('home.project_1_title'), class: 'card-image' %>
         <div class="card-content">
           <h3><%= t('home.project_1_title') %></h3>
@@ -72,7 +76,7 @@
       </div>
 
       <!-- Tarjeta 2 -->
-      <div class="card">
+      <div class="custom-card">
         <%= image_tag 'rubikcube.jpeg', alt: t('home.project_2_title'), class: 'card-image' %>
         <div class="card-content">
           <h3><%= t('home.project_2_title') %></h3>
@@ -87,7 +91,7 @@
       </div>
 
       <!-- Tarjeta 3 -->
-      <div class="card">
+      <div class="custom-card">
         <%= image_tag 'regex.jpg', alt: t('home.project_3_title'), class: 'card-image' %>
         <div class="card-content">
           <h3><%= t('home.project_3_title') %></h3>
@@ -103,6 +107,11 @@
     </div>
   </section>
 
+  <!-- Contacto -->
+  <div  id="contact">
+  <%= render 'shared/contact'%>
+  </div>
+
   <!-- Cambio de idioma -->
   <div class="language-switcher">
     <p>
@@ -114,3 +123,26 @@
     </p>
   </div>
 </div>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const links = document.querySelectorAll('nav a');
+
+        links.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault(); // Evita el comportamiento predeterminado
+                const targetId = this.getAttribute('href').substring(1); // Obtiene el ID del destino
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth', // Hace el scroll suave
+                        block: 'start', // Alinea al inicio del elemento
+                    });
+                }
+            });
+        });
+    });
+</script>

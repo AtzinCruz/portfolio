@@ -1,0 +1,39 @@
+
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <% (0..2).each do |index| %>
+      <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="<%= index %>" class="<%= 'active' if index == 0 %>" aria-current="<%= 'true' if index == 0 %>" aria-label="Slide <%= index + 1 %>"></button>
+    <% end %>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= image_tag('me.jpeg', class: 'd-block w-100', alt: 'Primera imagen') %>
+      <div class="carousel-caption d-none d-md-block">
+        <h5><%= t('carousel.AboutMe.title') %></h5>
+        <p><%= t('carousel.AboutMe.description') %></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag('LogoUni.jpg', class: 'd-block w-100', alt: 'Primera imagen') %>
+      <div class="carousel-caption d-none d-md-block">
+        <h5><%= t('carousel.Studying.title') %></h5>
+        <p><%= t('carousel.Studying.description') %></p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag('startup.jpeg', class: 'd-block w-100', alt: 'Primera imagen') %>
+      <div class="carousel-caption d-none d-md-block">
+        <h5><%= t('carousel.FunFact.title') %></h5>
+        <p><%= t('carousel.FunFact.description') %></p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>

@@ -13,10 +13,28 @@ es:
     personal_projects_title: "Mis Proyectos Personales"
     project_1_title: "Portafolio Personal"
     project_1_description: "Un sitio web para mostrar mis logros y proyectos."
-    project_2_title: "Resolver de Cubo"
-    project_2_description: "Una aplicación para resolver configuraciones del Cubo de Rubik utilizando algoritmos avanzados."
+    project_2_title: "Resolvedor de Cubo"
+    project_2_description: "Una aplicación para resolver configuraciones del Cubo de Rubik utilizando algoritmos de búsqueda avanzados."
     project_3_title: "Regex Simple"
     project_3_description: "Una aplicación de escritorio con una interfaz gráfica de usuario para trabajar con expresiones regulares, desarrollada en Python usando Tkinter."
     github_link: "Ver en GitHub"
     languages: "Idiomas"
     cube-resolver: "Algoritmos de búsqueda avanzados para resolver el Cubo de Rubik."
+    personal_projects: "Proyectos personales"
+  carousel:
+    AboutMe:
+      title: "Sobre Mí"
+      description: "Soy un estudiante adaptable que desea aprender y desafiarse con más proyectos e ideas que mejorarían la industria. Aspiro a trabajar en un entorno dinámico e innovador para aprender y mejorar mis habilidades."
+    Studying:
+        title: "Universidad Panamericana"
+        description: "Actualmente estoy estudiando la Licenciatura en Ingeniería en Inteligencia Artificial en la Universidad Panamericana Bonaterra. "
+    FunFact:
+      title: "Dato Curioso"
+      description: "He estado asistiendo a startup weekends desde 2014."
+  contact:
+    title: "Contáctame"
+    description: "Siempre estoy abierto a nuevas oportunidades y colaboraciones. No dudes en contactarme."
+    name: "Nombre"
+    email: "Correo electrónico"
+    message: "Mensaje"
+    send: "Enviar mensaje"

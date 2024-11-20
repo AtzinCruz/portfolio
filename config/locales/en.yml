@@ -13,9 +13,27 @@ en:
     project_1_title: "Personal Portfolio"
     project_1_description: "A website showcasing my achievements and projects."
     project_2_title: "Cube Resolver"
-    project_2_description: "An application to solve Rubik's Cube configurations using advanced algorithms."
+    project_2_description: "An application to solve Rubik's Cube configurations using advanced search algorithms."
     project_3_title: "Simple RegEx"
     project_3_description: "A desktop application with a GUI for working with regular expressions, developed in Python using Tkinter."
     github_link: "View on GitHub"
     languages: "Languages"
     cube-resolver: "Advanced search algorithms for solving the Rubik's Cube."
+    personal_projects: "Personal projects"
+  carousel:
+    AboutMe:
+      title: "About Me"
+      description: "I am an adaptable student who desires to learn and challenge myself with more projects and ideas that would improve the industry. I aspire to work in a dynamic and innovative environment to learn and improve my skills."
+    Studying:
+        title: "Universidad Panamericana"
+        description: "I am currently studying Bachelor’s Degree in Artificial Intelligence Engineering at Universidad Panamericana Bonaterra."
+    FunFact:
+      title: "Fun Fact"
+      description: "I've been attending to startup weekends since 2014."
+  contact:
+    title: "Contact Me"
+    description: "I am always open to new opportunities and collaborations. Feel free to reach out to me."
+    name: "Name"
+    email: "Email"
+    message: "Message"
+    send: "Send message"
