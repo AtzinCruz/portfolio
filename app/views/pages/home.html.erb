@@ -1,0 +1,116 @@
+<div class="container">
+  <!-- Foto de perfil y presentación -->
+  <div class="profile">
+    <%= image_tag 'Profile.jpeg', alt: 'Atzin Cruz', class: 'profile-photo' %>
+
+    <h1><%= t('home.greeting') %></h1>
+    <p><%= t('home.description') %></p>
+  </div>
+
+  <!-- Menú de navegación -->
+  <nav>
+    <ul>
+      <li><a href="#academic-achievements"><%= t('home.academic_achievements') %></a></li>
+      <li><a href="#personal-projects"><%= t('home.personal_projects') %></a></li>
+    </ul>
+  </nav>
+
+  <!-- Logros Académicos -->
+  <section id="academic-achievements">
+    <h2><%= t('home.academic_achievements_title') %></h2>
+    <div class="cards-container">
+      <!-- Tarjeta 1 -->
+      <div class="card">
+        <%= image_tag 'icpc.png', alt: t('home.achievement_1_title'), class: 'card-image' %>
+
+        <div class="card-content">
+          <h3><%= t('home.achievement_1_title') %></h3>
+          <p><%= t('home.achievement_1_description') %></p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="card">
+        <%= image_tag 'netica.jpeg', alt: t('home.project_2_title'), class: 'card-image' %>
+        <div class="card-content">
+          <h3><%= t('home.achievement_2_title') %></h3>
+          <p><%= t('home.achievement_2_description') %></p>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="card">
+        <%= image_tag 'chess.jpg', alt: t('home.achievement_3_title'), class: 'card-image' %>
+        <div class="card-content">
+          <h3><%= t('home.achievement_3_title') %></h3>
+          <p><%= t('home.achievement_3_description') %></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proyectos Personales -->
+  <section id="personal-projects">
+    <h2><%= t('home.personal_projects_title') %></h2>
+    <div class="cards-container">
+      <!-- Tarjeta 1 -->
+      <div class="card">
+        <%= image_tag 'portfolio.png', alt: t('home.project_1_title'), class: 'card-image' %>
+        <div class="card-content">
+          <h3><%= t('home.project_1_title') %></h3>
+          <p><%= t('home.project_1_description') %></p>
+          <ul class="languages-used">
+            <li>Ruby on Rails</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
+          <a href="https://github.com/AtzinCruz/portfolio.git" target="_blank" class="card-link">
+            <%= t('home.github_link') %>
+          </a>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="card">
+        <%= image_tag 'rubikcube.jpeg', alt: t('home.project_2_title'), class: 'card-image' %>
+        <div class="card-content">
+          <h3><%= t('home.project_2_title') %></h3>
+          <p><%= t('home.project_2_description') %></p>
+          <ul class="languages-used">
+            <li>Python</li>
+          </ul>
+          <a href="https://github.com/AtzinCruz/cube_resolver.git" target="_blank" class="card-link">
+            <%= t('home.github_link') %>
+          </a>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="card">
+        <%= image_tag 'regex.jpg', alt: t('home.project_3_title'), class: 'card-image' %>
+        <div class="card-content">
+          <h3><%= t('home.project_3_title') %></h3>
+          <p><%= t('home.project_3_description') %></p>
+          <ul class="languages-used">
+            <li>Python</li>
+          </ul>
+          <a href="https://github.com/AtzinCruz/Simple_RegEx" target="_blank" class="card-link">
+            <%= t('home.github_link') %>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cambio de idioma -->
+  <div class="language-switcher">
+    <p>
+      <%= t('home.languages') %>
+      <% I18n.available_locales.each do |locale| %>
+        <%= link_to locale.to_s.upcase, url_for(locale: locale), class: ('active' if I18n.locale == locale) %>
+        <%= ' | ' unless locale == I18n.available_locales.last %>
+      <% end %>
+    </p>
+  </div>
+</div>

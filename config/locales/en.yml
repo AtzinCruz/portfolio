@@ -1,31 +1,21 @@
-# Files in the config/locales directory are used for internationalization and
-# are automatically loaded by Rails. If you want to use locales other than
-# English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more about the API, please read the Rails Internationalization guide
-# at https://guides.rubyonrails.org/i18n.html.
-#
-# Be aware that YAML interprets the following case-insensitive strings as
-# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
-# must be quoted to be interpreted as strings. For example:
-#
-#     en:
-#       "yes": yup
-#       enabled: "ON"
-
 en:
-  hello: "Hello world"
+  home:
+    greeting: "Hi, I am Atzin Cruz"
+    description: "Turning ideas into real-life products."
+    academic_achievements_title: "My Academic Achievements"
+    achievement_1_title: "Top 50 in ICPC Mexico"
+    achievement_1_description: "Outstanding participation in the international programming contest."
+    achievement_2_title: "Top 3 Netica Competition"
+    achievement_2_description: "Third place in Middle school robotic competition (Netica) - 2018"
+    achievement_3_title: "Scholarship for chess tournament"
+    achievement_3_description: "Scholarship for the world chess tournament in 2018."
+    personal_projects_title: "My Personal Projects"
+    project_1_title: "Personal Portfolio"
+    project_1_description: "A website showcasing my achievements and projects."
+    project_2_title: "Cube Resolver"
+    project_2_description: "An application to solve Rubik's Cube configurations using advanced algorithms."
+    project_3_title: "Simple RegEx"
+    project_3_description: "A desktop application with a GUI for working with regular expressions, developed in Python using Tkinter."
+    github_link: "View on GitHub"
+    languages: "Languages"
+    cube-resolver: "Advanced search algorithms for solving the Rubik's Cube."
