@@ -17,8 +17,8 @@
 !/log/.keep
 !/tmp/.keep
 
-!/node_modules
-!/.idea
+/node_modules
+/.idea
 
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*
